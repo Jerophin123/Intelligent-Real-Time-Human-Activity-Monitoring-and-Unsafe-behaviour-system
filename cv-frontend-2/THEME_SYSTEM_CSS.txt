@@ -1,0 +1,236 @@
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: rgba(12, 14, 18, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.theme-toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 122, 255, 0.3), transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.theme-toggle-btn:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.05) rotate(15deg);
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95) rotate(-5deg);
+}
+
+/* Text Colors - Dark Theme */
+[data-theme="dark"] {
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+}
+
+/* Text Colors - Light Theme */
+[data-theme="light"] {
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary: #86868b;
+}
+
+/* Brand Logo - Dark Theme */
+[data-theme="dark"] .brand-logo {
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+  box-shadow: 
+    0 4px 16px rgba(0, 122, 255, 0.4),
+    0 8px 32px rgba(0, 122, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Brand Logo - Light Theme */
+[data-theme="light"] .brand-logo {
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+  box-shadow: 
+    0 2px 12px rgba(0, 122, 255, 0.3),
+    0 4px 24px rgba(0, 122, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Brand Title - Light Theme */
+[data-theme="light"] .brand-title {
+  background: linear-gradient(90deg, #007AFF, #5856D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Menu Button - Light Theme */
+[data-theme="light"] .menu-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #1d1d1f;
+}
+
+[data-theme="light"] .menu-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 122, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Panels - Light Theme */
+[data-theme="light"] .panel {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 
+    0 2px 16px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .panel:hover {
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Rows - Light Theme */
+[data-theme="light"] .row {
+  background: rgba(248, 248, 250, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .row:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 122, 255, 0.3);
+}
+
+/* Buttons - Light Theme */
+[data-theme="light"] .btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #1d1d1f;
+}
+
+[data-theme="light"] .btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 122, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Select Dropdown - Light Theme */
+[data-theme="light"] select.sel {
+  background: rgba(248, 248, 250, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #1d1d1f;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(0,0,0,0.5)' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+}
+
+[data-theme="light"] select.sel:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(0, 122, 255, 0.4);
+}
+
+[data-theme="light"] select.sel option {
+  background: #ffffff;
+  color: #1d1d1f;
+}
+
+/* Segmented Control - Light Theme */
+[data-theme="light"] .seg {
+  background: rgba(248, 248, 250, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Camera Cards - Light Theme */
+[data-theme="light"] .cam {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 
+    0 2px 16px rgba(0, 0, 0, 0.08),
+    0 1px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .cam:hover {
+  box-shadow: 
+    0 6px 32px rgba(0, 0, 0, 0.12),
+    0 3px 16px rgba(0, 0, 0, 0.08),
+    0 0 40px rgba(0, 122, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 122, 255, 0.3);
+}
+
+[data-theme="light"] .cam-header {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 248, 250, 0.7) 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .cam img {
+  background: linear-gradient(135deg, #f5f5f7, #e8e8ed);
+}
+
+/* Loading & Empty States - Light Theme */
+[data-theme="light"] .loading,
+[data-theme="light"] .empty {
+  background: rgba(248, 248, 250, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #6e6e73;
+}
+
+/* Scrollbar - Light Theme */
+[data-theme="light"] .container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Status Badges - Light Theme */
+[data-theme="light"] .status-active {
+  background: rgba(52, 199, 89, 0.15);
+  border-color: rgba(52, 199, 89, 0.5);
+}
+
+[data-theme="light"] .status-inactive {
+  background: rgba(142, 142, 147, 0.15);
+  border-color: rgba(142, 142, 147, 0.4);
+}
+
+

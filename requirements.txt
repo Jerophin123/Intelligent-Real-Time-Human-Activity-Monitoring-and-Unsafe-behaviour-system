@@ -1,0 +1,24 @@
+# Core dependencies from app7.py
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+sse-starlette>=1.6.0
+
+# Computer Vision and ML
+opencv-python>=4.8.0
+ultralytics>=8.0.0
+numpy>=1.24.0
+deepface>=0.0.79
+
+# Geometry and spatial operations
+shapely>=2.0.0
+
+# Audio processing (Windows-compatible alternative)
+pygame>=2.5.0
+
+# Database
+# sqlite3 is included in Python standard library
+
+# Standard library modules used (no pip install needed):
+# - os, re, time, json, argparse, threading, asyncio, sqlite3
+# - datetime, typing, collections, concurrent.futures

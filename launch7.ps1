@@ -1,0 +1,1 @@
+python app7.py --model yolov8n.pt --cams "cameraA=0,cameraB=1,cameraC=2,cameraD=3" --conf 0.35 --imgsz 640 --skip-frames 2 --port 8000 --allowlist-dir ./known_faces --face-threshold 0.85 --face-model VGG-Face --freeze-eps 2.5 --freeze-sustain 30 --freeze-cooldown 5 --zone-cooldown 1.5 --enable-ppe --require-helmet --require-vest --ppe-cooldown 3
