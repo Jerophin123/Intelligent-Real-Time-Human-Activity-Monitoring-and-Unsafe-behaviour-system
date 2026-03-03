@@ -19,6 +19,12 @@ pygame>=2.5.0
 # Database
 # sqlite3 is included in Python standard library
 
+# Report generation (PDF + charts)
+reportlab>=4.0.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+seaborn>=0.12.0
+
 # Standard library modules used (no pip install needed):
 # - os, re, time, json, argparse, threading, asyncio, sqlite3
-# - datetime, typing, collections, concurrent.futures
+# - datetime, typing, collections, concurrent.futures, io
